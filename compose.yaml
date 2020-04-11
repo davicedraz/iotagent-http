@@ -1,0 +1,16 @@
+﻿  iotagent-http:
+    image: dojot/iotagent-http
+    depends_on:
+      - kafka
+      - data-broker
+      - auth
+    ports:
+      - 8002:8002
+    restart: always
+    environment:
+      DOJOT_SERVICE_MANAGEMENT: 'internal'
+      SERVER_PORT: 8002
+    logging:
+      driver: json-file
+      options:
+        max-size: 100m
