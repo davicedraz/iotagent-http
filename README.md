@@ -4,6 +4,10 @@
 
 An IoT Agent is a custom microservice required to integrate a device that is not supported by default on the middleware platform:
 
+<p align="center">
+<img src="./docs/images/architecture.png" alt="drawing"/>
+</p>
+
 Once devices are configured, the HTTP IoT Agent is capable of mapping the data received from devices, encapsulated on HTTP and send them to the message broker for internal distribution. This way, the data reaches the persistence service, for instance, so it can persist the data on a database.
 
 ## Development
